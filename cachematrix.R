@@ -3,10 +3,10 @@
 ##    cacheSolve to calculate or get cached value of inverse of the matrix
 
 ## makeCacheMatrix creates a special "matrix", which is really a list containing a function to
-##   set the value of the matrix
-##   get the value of the matrix
-##   set the value of the inverse matrix
-##   get the value of the inverse matrix
+##    set the matrix
+##    get the matrix
+##    set the inverse matrix
+##    get the inverse matrix
 makeCacheMatrix <- function(x = matrix()) {
     im <- matrix(nrow=0,ncol=0) # Empty matrix
     
@@ -35,7 +35,7 @@ cacheSolve <- function(x, ...) {
         return(im)
     }
     data <- x$get()
-    im <- solve(data, ...)  # Return a matrix that is the inverse of 'x'
+    im <- solve(data, ...)  # Return a matrix that is the inverse of matrix 'x'
     x$setinverse(im)
     im
 }
